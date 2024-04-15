@@ -1,6 +1,6 @@
 provider "google" {
-  project = "test-sp01"
-  region  = "europe-west2"
+  project = var.project_id
+  region  = var.region
 }
 # https://www.terraform.io/language/settings/backends/gcs
 terraform {
@@ -11,7 +11,8 @@ terraform {
   required_providers {
     google = {
       source  = "hashicorp/google"
-      version = "~> 4.0"
+      version = "~> 5.9.0"
     }
+    
   }
 }
